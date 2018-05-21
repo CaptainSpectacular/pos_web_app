@@ -9,9 +9,9 @@ gem 'faraday'
 gem 'figaro'
 
 # Bootstrap
-gem 'bootstrap', '~> 4.1.1'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
