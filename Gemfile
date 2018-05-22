@@ -9,7 +9,7 @@ gem 'faraday'
 gem 'figaro'
 
 # Bootstrap
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 
@@ -47,6 +47,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'rails-controller-testing'
+  gem 'capybara'
 end
 
 group :test do
