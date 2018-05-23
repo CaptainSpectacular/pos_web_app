@@ -9,9 +9,9 @@ gem 'faraday'
 gem 'figaro'
 
 # Bootstrap
-gem 'bootstrap', '~> 4.1.1'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
@@ -47,6 +47,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'rails-controller-testing'
+  gem 'capybara'
 end
 
 group :test do
