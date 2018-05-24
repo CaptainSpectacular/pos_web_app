@@ -15,3 +15,10 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+.error-explanation{
+  color: #730E15;
+  h2 {
+    font-size: 18px;
+  }
+}

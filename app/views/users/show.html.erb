@@ -1,5 +1,87 @@
-<h1>Account Information</h1>
+<div class="container">
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        My Profile
+      </div>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#summary">Summary</a></li>
+        <li><a data-toggle="tab" href="#update">Update Information</a></li>
+        <li><a data-toggle="tab" href="#settings">Settings</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="summary" class="tab-pane fade in active panel-body">
+          <div class="form-group row">
+            <label class="col-lg-4">Company</label>
+            <div class="col-lg-8">
+              Example Company, Inc.
+            </div>
+          </div>
 
-<p>Company: TODO add company to user account</p>
-<p>Email: <%= current_user.email %>
-<p>Total Stock: TODO add inventory item count</p>
+          <div class="form-group row">
+            <label class="col-lg-4">Email</label>
+            <div class="col-lg-8">
+              <%= current_user.email %>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-lg-4">Total Stock</label>
+            <div class="col-lg-8">
+              134
+            </div>
+          </div>
+        </div>
+
+        <div id="update" class="tab-pane fade">
+          <div class=" panel-body">
+            <div class="form-group row">
+              <label class="col-lg-4">Username</label>
+              <div class="col-lg-8">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-lg-4">Password</label>
+              <div class="col-lg-8">
+                <input type="password" class="form-control" autocomplete="new-password"/>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-lg-4">Confirm Password</label>
+              <div class="col-lg-8">
+                <input type="password" class="form-control" />
+              </div>
+            </div>
+
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-primary">Save</button>
+          </div>
+        </div>
+
+
+        <div id="settings" class="tab-pane fade panel-body">
+          <p>Change your settings here</p>
+          <div class="form-group row">
+            <label class="col-lg-4">Display All Prices</label>
+            <div class="col-lg-8">
+              <input type="radio" name="displayPrices" value="true" checked> Yes <br/>
+              <input type="radio" name="displayPrices" value="false"> No <br/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-lg-4">My Profit Margin</label>
+            <div class="col-lg-8">
+              20%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
