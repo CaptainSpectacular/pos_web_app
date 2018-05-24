@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.tcgplayer.com/pricing/marketprices/18844
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.1
+      Authorization:
+      - bearer p5uSr29yvm_LC6Qdns64gvdfazEat5YzQGB85tYKH1oDHJiHQTmwVN364KA5u2R_02rcwoLV-ebaHVy_JsYHxwC95XhXw2BAwz1tb9HrtC6g-8JyxROvMPHhiP09eO5qik1EgqCHZGkV15OpNme-W5-cbOzLPXZBKe8oHSuuU0S5AyTxyoT_eEl1hzbSawblKKUt4uZsB064cmHFqH9GoHT-7mgsirecke25gZRcBmutOV9qkGrZAfiaUSatbyrVqSXufYKnL_TNp0IdWrly2AW9E1bxny0jgGZtrgLC31MGHRQunZPJ6tNNedbzBrgbp_ZPcA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      Date:
+      - Thu, 24 May 2018 18:53:18 GMT
+      Content-Length:
+      - '124'
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"errors":[],"results":[{"productConditionId":18844,"price":26.18,"lowestRange":10.50,"highestRange":31.49}]}'
+    http_version: 
+  recorded_at: Thu, 24 May 2018 18:52:34 GMT
+recorded_with: VCR 4.0.0
