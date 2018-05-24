@@ -13,9 +13,16 @@
             <li class="active"><a href=<%= root_path %>>Home</a></li>
             <li><a href="#">Browse Inventory</a></li>
             <li><a href="#">Manage Inventory</a></li>
+            <li><%= link_to 'My Profile', profile_path if current_user %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Login</a></li>
+          <li>
+            <% if current_user %>
+              <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to 'Login', new_user_session_path %>
+            <% end %>
+          </li>
         </ul>
     </div>
 </nav>
