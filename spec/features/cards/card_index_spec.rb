@@ -9,15 +9,15 @@ feature 'card index page' do
 
   context 'a user can sort' do
     scenario 'by set' do
-      expect(page).to have_content('Sort by Set')
+      expect(page).to have_button('Sort by Set')
     end
 
     scenario 'by color' do
-      expect(page).to have_content('Sort by Color')
+      expect(page).to have_button('Sort by Color')
     end
 
     scenario 'by name' do
-      expect(page).to have_content('Sort by Name')
+      expect(page).to have_button('Sort by Name')
     end
   end
 end

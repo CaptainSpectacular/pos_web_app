@@ -1,0 +1,18 @@
+.card-list{
+  text-align: center;
+  display: block;
+}
+
+.card{
+  border: 5px solid black;
+  border-radius: 15px;
+}
+
+.card-info{
+  display: inline-block;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  color: #7F7F7F;
+}
