@@ -1,6 +1,10 @@
 .card-list{
   text-align: center;
   display: block;
+  color: #7F7F7F;
+  &:hover{
+    color: white;
+  }
 }
 
 .card-container{
