@@ -5,11 +5,11 @@ class MasterService
     Faraday.new('http://api.tcgplayer.com')
   end
 
-  def get(url, &block)
+  def get(url, params = {})
     conn.get do |req|
       req.headers['Authorization'] = 'bearer ' + ENV['BEARER_TOKEN'] 
       req.url url
-      req.params = yield if block_given? 
+      req.params = params
     end.body
   end
 end

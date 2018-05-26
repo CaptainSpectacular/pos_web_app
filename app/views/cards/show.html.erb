@@ -1,2 +1,30 @@
-<%= image_tag(@card.image_url, class: 'card') %>
-<%= @card.name %>
+
+<div class="card-container">
+  <div>
+    <%= image_tag(@presenter.image, class: 'card') %>
+  </div>
+
+  <div class="card-info">
+    <div class="card-title">
+      <h4>
+        Name: <%= @presenter.name %>
+      <h4>
+    </div>
+
+    <div class="card-pricing">
+      <h5>
+        <div>
+          Near Mint: <%= @presenter.price %>
+        <div>
+      </h5>
+    </div>
+
+    <div class="card-options">
+      <div class="quantity">
+        <%= form_tag(inventory_path(current_inventory) method: :patch) do %>
+          <%= label_tag(:quantity, "Add to Inventory" %>
+        <% end %>
+      </div
+    </div>
+  </div>
+</div>

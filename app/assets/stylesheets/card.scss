@@ -3,16 +3,26 @@
   display: block;
 }
 
+.card-container{
+  margin: auto;
+  width: 50%;
+  border: 3px dotted white;
+  padding: 10px;
+  overflow: hidden;
+}
+
 .card{
   border: 5px solid black;
   border-radius: 15px;
+  display: inline-block;
+  float: left;
 }
 
 .card-info{
-  display: inline-block;
   overflow: hidden;
+  display: inline-block;
+  border: 1px solid white;
   background-size: cover;
-  background-position: center;
-  background-color: white;
-  color: #7F7F7F;
+  margin-left: 5%;
+  width: 50%;
 }

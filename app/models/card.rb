@@ -15,4 +15,10 @@ class Card < ApplicationRecord
            image_url: attrs[:results].first[:image],
            condition_id: attrs[:results].first[:productConditions].first[:productConditionId])
   end
+
+  def price
+    service = TCGPlayerService.new
+    price = service.get_price(condition_id)
+    price[:results][0][:price]
+  end
 end

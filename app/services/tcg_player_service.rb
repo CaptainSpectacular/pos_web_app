@@ -6,10 +6,10 @@ class TCGPlayerService < MasterService
   end
 
   def card_info(name)
-    JSON.parse(get(@card_url) { {'productName' => name} }, symbolize_names: true)
+    JSON.parse(get(@card_url, { productName: name }), symbolize_names: true)
   end
 
-  def card_pricing(con_id)
+  def get_price(con_id)
     JSON.parse(get(@price_url + "/#{con_id}"), symbolize_names: true)
   end
 end

@@ -1,9 +1,16 @@
 require 'rails_helper'
 
 feature 'card index page' do
-  context 'a user should see all MTG cards' do
-    xscenario 'find out how to test this' do
+  background do 
+    create_list(:card, 26) 
+    visit cards_path
+  end
 
+  context 'a user should see all MTG cards' do
+    scenario 'they see 25 cards per page' do
+      expect(page).to have_css('.card-list', count: 25)
+      expect(page).to have_link(Card.first.name)
+      expect(page).to_not have_link(Card.last.name)
     end
   end
 

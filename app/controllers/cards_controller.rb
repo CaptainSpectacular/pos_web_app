@@ -1,9 +1,9 @@
 class CardsController < ApplicationController
   def index
-    @cards = Card.all
+    @cards = Card.pluck(:name)
   end
 
   def show
-    @card = Card.find_by(name: params[:slug])
+    @presenter = CardPresenter.new(Card.find_by(name: params[:slug]))
   end
 end
