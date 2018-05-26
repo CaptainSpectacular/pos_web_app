@@ -11,10 +11,6 @@ feature 'navbar content' do
       expect(page).to have_link('MTGInventory')
     end
 
-    it 'has Browse Inventory link' do
-      expect(page).to have_link('Browse Inventory')
-    end
-
     it 'has login link' do
       expect(page).to have_link('Login')
     end
@@ -45,8 +41,8 @@ feature 'navbar content' do
       expect(page).to_not have_link('Login')
     end
 
-    it 'has Manage Inventory' do
-      expect(page).to have_link('Manage Inventory')
+    it 'has Inventory' do
+      expect(page).to have_link('Inventory')
     end
   end
 end

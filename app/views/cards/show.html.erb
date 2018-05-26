@@ -1,0 +1,31 @@
+
+<div class="card-container">
+  <div>
+    <%= image_tag(@presenter.image, class: 'card') %>
+  </div>
+
+  <div class="card-info">
+    <div class="card-title">
+      <h4>
+        Name: <%= @presenter.name %>
+      <h4>
+    </div>
+
+    <div class="card-pricing">
+      <h5>
+        <div>
+          Near Mint: <%= number_to_currency(@presenter.price) %>
+        <div>
+      </h5>
+    </div>
+
+    <div class="card-options">
+      <div class="quantity">
+        <%= form_tag(root_path, method: :patch) do %>
+          <%= number_field(:quantity, :integer, in: 1..100) %>
+          <%= submit_tag("Add to Inventory") %>
+        <% end %>
+      </div
+    </div>
+  </div>
+</div>

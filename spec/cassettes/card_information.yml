@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.tcgplayer.com/v1.9.1/catalog/products?productName=Dream%20Halls
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.1
+      Authorization:
+      - bearer p5uSr29yvm_LC6Qdns64gvdfazEat5YzQGB85tYKH1oDHJiHQTmwVN364KA5u2R_02rcwoLV-ebaHVy_JsYHxwC95XhXw2BAwz1tb9HrtC6g-8JyxROvMPHhiP09eO5qik1EgqCHZGkV15OpNme-W5-cbOzLPXZBKe8oHSuuU0S5AyTxyoT_eEl1hzbSawblKKUt4uZsB064cmHFqH9GoHT-7mgsirecke25gZRcBmutOV9qkGrZAfiaUSatbyrVqSXufYKnL_TNp0IdWrly2AW9E1bxny0jgGZtrgLC31MGHRQunZPJ6tNNedbzBrgbp_ZPcA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      Date:
+      - Thu, 24 May 2018 18:43:40 GMT
+      Content-Length:
+      - '4820'
+    body:
+      encoding: UTF-8
+      string: '{"totalItems":1,"success":true,"errors":[],"results":[{"productId":5333,"productName":"Dream
+        Halls","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/5333_200w.jpg","categoryId":1,"groupId":107,"url":"http://store.tcgplayer.com/magic/stronghold/dream-halls","modifiedOn":"2017-09-14T13:35:32.927","productConditions":[{"productConditionId":18844,"name":"Near
+        Mint","language":"English","isFoil":false},{"productConditionId":320851,"name":"Damaged","language":"English","isFoil":false},{"productConditionId":336609,"name":"Moderately
+        Played","language":"English","isFoil":false},{"productConditionId":352367,"name":"Heavily
+        Played","language":"English","isFoil":false},{"productConditionId":368125,"name":"Lightly
+        Played","language":"English","isFoil":false},{"productConditionId":2544550,"name":"Near
+        Mint - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2544693,"name":"Lightly
+        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2544836,"name":"Moderately
+        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2544979,"name":"Heavily
+        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2545122,"name":"Damaged
+        - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2545980,"name":"Near
+        Mint - French","language":"French","isFoil":false},{"productConditionId":2546123,"name":"Lightly
+        Played - French","language":"French","isFoil":false},{"productConditionId":2546266,"name":"Moderately
+        Played - French","language":"French","isFoil":false},{"productConditionId":2546409,"name":"Heavily
+        Played - French","language":"French","isFoil":false},{"productConditionId":2546552,"name":"Damaged
+        - French","language":"French","isFoil":false},{"productConditionId":2547410,"name":"Near
+        Mint - German","language":"German","isFoil":false},{"productConditionId":2547553,"name":"Lightly
+        Played - German","language":"German","isFoil":false},{"productConditionId":2547696,"name":"Moderately
+        Played - German","language":"German","isFoil":false},{"productConditionId":2547839,"name":"Heavily
+        Played - German","language":"German","isFoil":false},{"productConditionId":2547982,"name":"Damaged
+        - German","language":"German","isFoil":false},{"productConditionId":2548840,"name":"Near
+        Mint - Italian","language":"Italian","isFoil":false},{"productConditionId":2548983,"name":"Lightly
+        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2549126,"name":"Moderately
+        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2549269,"name":"Heavily
+        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2549412,"name":"Damaged
+        - Italian","language":"Italian","isFoil":false},{"productConditionId":2550270,"name":"Near
+        Mint - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550413,"name":"Lightly
+        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550556,"name":"Moderately
+        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550699,"name":"Heavily
+        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550842,"name":"Damaged
+        - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2551700,"name":"Near
+        Mint - Korean","language":"Korean","isFoil":false},{"productConditionId":2551843,"name":"Lightly
+        Played - Korean","language":"Korean","isFoil":false},{"productConditionId":2551986,"name":"Moderately
+        Played - Korean","language":"Korean","isFoil":false},{"productConditionId":2552129,"name":"Heavily
+        Played - Korean","language":"Korean","isFoil":false},{"productConditionId":2552272,"name":"Damaged
+        - Korean","language":"Korean","isFoil":false},{"productConditionId":2553130,"name":"Near
+        Mint - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553273,"name":"Lightly
+        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553416,"name":"Moderately
+        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553559,"name":"Heavily
+        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553702,"name":"Damaged
+        - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2554560,"name":"Near
+        Mint - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2554703,"name":"Lightly
+        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2554846,"name":"Moderately
+        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2554989,"name":"Heavily
+        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2555132,"name":"Damaged
+        - Spanish","language":"Spanish","isFoil":false}]}]}'
+    http_version: 
+  recorded_at: Thu, 24 May 2018 18:42:55 GMT
+recorded_with: VCR 4.0.0

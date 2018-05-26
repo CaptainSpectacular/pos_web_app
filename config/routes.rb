@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'dashboard#show'
 
   get '/profile', to: 'users#show'
+  resources :cards, param: :slug
 end
