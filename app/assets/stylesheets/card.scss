@@ -19,10 +19,17 @@
 }
 
 .card-info{
+  padding: 2%;
+  background-color: black; 
+  color: white;
   overflow: hidden;
   display: inline-block;
-  border: 1px solid white;
   background-size: cover;
   margin-left: 5%;
   width: 50%;
+  height: 20em;
+}
+
+.card-options{
+  color: black;
 }

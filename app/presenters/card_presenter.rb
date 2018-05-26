@@ -14,6 +14,5 @@ class CardPresenter
 
   def price
     @price ||= @card.price
-    "%.2f"% @price
   end
 end

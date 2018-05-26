@@ -14,15 +14,16 @@
     <div class="card-pricing">
       <h5>
         <div>
-          Near Mint: <%= @presenter.price %>
+          Near Mint: <%= number_to_currency(@presenter.price) %>
         <div>
       </h5>
     </div>
 
     <div class="card-options">
       <div class="quantity">
-        <%= form_tag(inventory_path(current_inventory) method: :patch) do %>
-          <%= label_tag(:quantity, "Add to Inventory" %>
+        <%= form_tag(root_path, method: :patch) do %>
+          <%= number_field(:quantity, :integer, in: 1..100) %>
+          <%= submit_tag("Add to Inventory") %>
         <% end %>
       </div
     </div>
