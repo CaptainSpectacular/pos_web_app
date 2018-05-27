@@ -8,7 +8,7 @@ class Card < ApplicationRecord
     name
   end
 
-  def create_from_api(params)
+  def self.create_from_api(params)
     create(parameterize(params)) 
   end
 
@@ -21,7 +21,7 @@ class Card < ApplicationRecord
   private
 
   def self.parameterize(params)
-    { name:         params[:results].first[:product_name],
+    { name:         params[:results].first[:productName],
       image_url:    params[:results].first[:image],
       condition_id: params[:results].first[:productConditions].first[:productConditionId]
     }
