@@ -8,17 +8,22 @@ class Card < ApplicationRecord
     name
   end
 
-  def self.write_from_query(name)
-    service = TCGPlayerService.new
-    attrs = service.card_info(name)
-    create(name: attrs[:results].first[:productName], 
-           image_url: attrs[:results].first[:image],
-           condition_id: attrs[:results].first[:productConditions].first[:productConditionId])
+  def create_from_api(params)
+    create(parameterize(params)) 
   end
 
   def price
     service = TCGPlayerService.new
     price = service.get_price(condition_id)
     price[:results][0][:price]
+  end
+
+  private
+
+  def self.parameterize(params)
+    { name:         params[:results].first[:product_name],
+      image_url:    params[:results].first[:image],
+      condition_id: params[:results].first[:productConditions].first[:productConditionId]
+    }
   end
 end
