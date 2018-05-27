@@ -3,5 +3,5 @@
 <%= link_to 'Sort by Name', '?sort=name' %>
 
 <% @cards.each do |card| %>
-  <%= link_to card, card_path(card), class: 'card-list' %>
+  <%= link_to card.name, card_path(card), class: 'card-list' %>
 <% end %>

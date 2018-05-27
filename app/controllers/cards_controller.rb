@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   before_action :set_card, only: :show
 
   def index
-    @cards = Card.pluck(:name)
+    @cards = Card.paginate(page: params[:page], per_page: 25)
   end
 
   def show
