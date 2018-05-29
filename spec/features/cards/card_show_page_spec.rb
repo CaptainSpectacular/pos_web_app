@@ -3,7 +3,9 @@ require 'rails_helper'
 feature 'card show page' do
   let(:card) { create(:card) }
   background do
-    visit card_path(card)
+    VCR.use_cassette('card_show') do
+      visit card_path(card)
+    end
   end
 
   it 'shows the card image' do
@@ -12,5 +14,9 @@ feature 'card show page' do
 
   it 'shows the card title' do
     expect(page).to have_content(card.name)
+  end
+
+  it 'shows the card price' do
+    expect(page.html).to match(/\$\d*\.\d\d/)
   end
 end

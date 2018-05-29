@@ -19,10 +19,10 @@ describe TCGPlayerService do
       end
     end
 
-    describe '#card_pricing' do
+    describe '#get_price' do
       it 'returns pricing information of a condition id' do
         VCR.use_cassette('card_pricing') do
-          expected = service.card_pricing(18844)
+          expected = service.get_price(18844)
 
           expect(expected[:success]).to be_truthy
           expect(expected[:results].first[:price]).to_not be_nil
