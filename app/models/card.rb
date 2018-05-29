@@ -8,22 +8,26 @@ class Card < ApplicationRecord
     name
   end
 
-  def self.create_from_api(params)
-    create(parameterize(params)) 
+  def price
+    info = service.get_price(con_id)
+    info[:results][0][:price]
   end
 
-  def price
-    service = TCGPlayerService.new
-    price = service.get_price(condition_id)
-    price[:results][0][:price]
+  def image
+    info = service.get_info(name)
+    info[:results].first[:image]
   end
 
   private
 
-  def self.parameterize(params)
-    { name:         params[:results].first[:productName],
-      image_url:    params[:results].first[:image],
-      condition_id: params[:results].first[:productConditions].first[:productConditionId]
-    }
+  def con_id
+    info           = service.get_info(name)
+    condition_id ||= info[:results].first[:productConditions].first[:productConditionId]
+    save
+    condition_id
+  end
+
+  def service
+    TCGPlayerService.new
   end
 end

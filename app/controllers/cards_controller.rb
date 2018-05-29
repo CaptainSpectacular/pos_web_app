@@ -17,6 +17,6 @@ class CardsController < ApplicationController
   end
 
   def search
-    @cards = Card.where("name LIKE '%#{params[:search][:q]}%'")
+    @cards = Card.where("name LIKE '%#{params[:q]}%'")
   end
 end

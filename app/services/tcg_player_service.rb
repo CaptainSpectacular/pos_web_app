@@ -5,7 +5,7 @@ class TCGPlayerService < MasterService
     @price_url = "/pricing/marketprices"
   end
 
-  def card_info(name)
+  def get_info(name)
     JSON.parse(get(@card_url, { productName: name }), symbolize_names: true)
   end
 
