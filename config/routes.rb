@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'users#show'
   resources :cards, param: :slug
+
+  resources :inventories
 end

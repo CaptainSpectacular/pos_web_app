@@ -1,6 +1,10 @@
 FactoryBot.define do
   factory :user do
-    email    'definitely_smashmouth@org.com' 
-    password 'ezpzpassword' 
+    email    { generate(:email) }
+    password 'ezpzpassword'
+  end
+
+  sequence :email do |num|
+    "definitely_smashmouth_#{num}@example.com"
   end
 end

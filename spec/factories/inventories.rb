@@ -1,5 +1,10 @@
 FactoryBot.define do
   factory :inventory do
-    name "MyString"
+    name { generate(:inventory_name) }
+    user { create(:user) }
+  end
+
+  sequence :iventory_name do |num|
+    "Typing Like a Barbarian #{num}"
   end
 end

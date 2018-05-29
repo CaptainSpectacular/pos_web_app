@@ -14,7 +14,7 @@
               <%= link_to 'Home', root_path %>
             </li>
             <li class="<%= 'active' if params[:controller] == 'inventory' %>">
-              <a href="#">Inventory</a>
+              <%= link_to 'Inventory', inventories_path %>
             </li>
             <li class="<%= 'active' if params[:controller] == 'card' %>">
               <%= link_to 'Cards', cards_path %>
