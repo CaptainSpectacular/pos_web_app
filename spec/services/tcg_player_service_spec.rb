@@ -7,7 +7,7 @@ describe TCGPlayerService do
     describe '#card_info' do
       it 'makes an api call and returns card information' do
         VCR.use_cassette('card_information') do
-          expected = service.card_info('Dream Halls')
+          expected = service.get_info('Dream Halls')
           condition = expected[:results].first[:productConditions].first
           
           expect(expected[:success]).to be_truthy
@@ -21,7 +21,7 @@ describe TCGPlayerService do
 
     describe '#get_price' do
       it 'returns pricing information of a condition id' do
-        VCR.use_cassette('card_pricing') do
+        VCR.use_cassette('card_pricing_2') do
           expected = service.get_price(18844)
 
           expect(expected[:success]).to be_truthy

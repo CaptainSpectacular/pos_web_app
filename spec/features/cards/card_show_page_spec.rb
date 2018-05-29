@@ -4,7 +4,9 @@ feature 'card show page' do
   let(:card) { create(:card) }
   background do
     VCR.use_cassette('card_show') do
-      visit card_path(card)
+      VCR.use_cassette('card_pricing') do
+        visit card_path(card)
+      end
     end
   end
 

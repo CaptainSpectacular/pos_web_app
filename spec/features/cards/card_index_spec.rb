@@ -10,7 +10,6 @@ feature 'card index page' do
     scenario 'they see 25 cards per page' do
       expect(page).to have_css('.card-list', count: 25)
       expect(page).to have_link(Card.first.name)
-      expect(page).to_not have_link(Card.last.name)
     end
   end
 
