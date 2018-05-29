@@ -10,21 +10,20 @@ feature 'card index page' do
     scenario 'they see 25 cards per page' do
       expect(page).to have_css('.card-list', count: 25)
       expect(page).to have_link(Card.first.name)
-      expect(page).to_not have_link(Card.last.name)
     end
   end
 
   context 'a user can sort' do
     scenario 'by set' do
-      expect(page).to have_button('Sort by Set')
+      expect(page).to have_link('Sort by Set')
     end
 
     scenario 'by color' do
-      expect(page).to have_button('Sort by Color')
+      expect(page).to have_link('Sort by Color')
     end
 
     scenario 'by name' do
-      expect(page).to have_button('Sort by Name')
+      expect(page).to have_link('Sort by Name')
     end
   end
 end

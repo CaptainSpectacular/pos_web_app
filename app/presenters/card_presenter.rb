@@ -1,7 +1,6 @@
 class CardPresenter
   def initialize(card)
     @card    = card
-    @service = TCGPlayerService.new
   end
 
   def name
@@ -9,7 +8,7 @@ class CardPresenter
   end
 
   def image
-    @card.image_url
+    @image ||= @card.image
   end
 
   def price
