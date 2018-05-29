@@ -24,7 +24,7 @@
             </li>
         </ul>
 
-        <%= form_tag({controller: 'cards', action: 'index'}, method: 'get') do %>
+        <%= form_tag('/cards', method: 'get') do %>
           <div class="navbar-form navbar-left">
             <div class="input-group">
               <%= text_field_tag :q, nil, class: 'form-control' %>
