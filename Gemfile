@@ -14,6 +14,7 @@ gem 'figaro'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Security. Devise
 gem 'devise'

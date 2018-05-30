@@ -6,12 +6,12 @@ feature 'index' do
   end
 
   background do
-    visit new_user_sessions_path
-    fill_in "Email", with: user.email
-    fill_in "Passoword", with: user.password
-    click_on "Log in"
+    user.inventories.create(name: 'thingy')
+    visit new_user_session_path
+    fill_in 'Email',    with: user.email
+    fill_in 'Password', with: user.password
+    click_on 'Log in'
     visit inventories_path
-    user.inventories.create(name: "thingy")
   end
 
   it 'should show inventories when logged in' do

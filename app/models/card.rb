@@ -9,7 +9,7 @@ class Card < ApplicationRecord
   end
 
   def price
-    info = service.get_price(con_id)
+    info = service.get_price(condition_id)
     info[:results][0][:price]
   end
 
@@ -18,13 +18,18 @@ class Card < ApplicationRecord
     info[:results].first[:image]
   end
 
+  def condition_id
+    update(condition_id: set_con_id) unless self[:condition_id]
+    self[:condition_id]
+  end
+
   private
 
-  def con_id
-    info           = service.get_info(name)
-    condition_id ||= info[:results].first[:productConditions].first[:productConditionId]
-    save
-    condition_id
+  def set_con_id
+    info =  service.get_info(name)
+    condition_id = info[:results][0]
+                       [:productConditions][0]
+                       [:productConditionId]
   end
 
   def service
