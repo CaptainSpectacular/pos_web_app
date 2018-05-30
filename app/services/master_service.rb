@@ -2,7 +2,7 @@ class MasterService
   protected
 
   def conn
-    Faraday.new('http://api.tcgplayer.com')
+    Faraday.new('https://api.tcgplayer.com')
   end
 
   def get(url, params = {})

@@ -27,9 +27,7 @@ class Card < ApplicationRecord
 
   def set_con_id
     info =  service.get_info(name)
-    condition_id = info[:results][0]
-                       [:productConditions][0]
-                       [:productConditionId]
+    info[:results][0][:productConditions][0][:productConditionId]
   end
 
   def service
