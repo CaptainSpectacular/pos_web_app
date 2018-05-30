@@ -1,0 +1,221 @@
+{
+  "RSpec": {
+    "coverage": {
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/controllers/dashboard_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/models/card.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        0,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/models/inventory_card.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/models/inventory.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/services/master_service.rb": [
+        1,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        null,
+        3,
+        3,
+        3,
+        3,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/services/tcg_player_service.rb": [
+        1,
+        null,
+        1,
+        6,
+        6,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/controllers/cards_controller.rb": [
+        1,
+        1,
+        4,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/presenters/card_presenter.rb": [
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/controllers/inventories_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "C:/Users/woops/ruby/mtgpos/pos_web_app/app/presenters/inventory_presenter.rb": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1527442932
+  }
+}
