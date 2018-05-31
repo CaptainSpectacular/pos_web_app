@@ -1,0 +1,9 @@
+<div class="card-options"> 
+  <div class="quantity"> 
+    <%= form_tag(inventory_path(current_inventory), method: :patch) do %> 
+      <%= hidden_field_tag :card, @presenter.name %> 
+      <%= number_field(:quantity, :integer, in: 1..100) %> 
+      <%= submit_tag("Add to Inventory") %> 
+    <% end %> 
+  </div> 
+</div>
