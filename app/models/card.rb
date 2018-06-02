@@ -4,6 +4,10 @@ class Card < ApplicationRecord
 
   validates :name, presence: true
 
+  def self.like(params)
+    where("name LIKE '%#{params}%'")
+  end
+
   def to_param
     name
   end
