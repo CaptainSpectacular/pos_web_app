@@ -29,9 +29,10 @@
       </tr>
     <% end %>
   </table>
-  <div class="card-navigation">
-    <% #params[:page].to_i + 1 %>
-    <%= button_tag 'Previous', class: 'btn btn-primary previous' %>
-    <%= button_tag 'Next', class: 'btn btn-primary next' %>
+  <div class="apple_pagination card-nav">
+    <div class="page_info">
+      <%= page_entries_info @cards %>
+    </div>
+    <%= will_paginate @cards, :container => false %>
   </div>
 </div>
