@@ -5,6 +5,17 @@ class Inventory < ApplicationRecord
 
   validates :name, presence: true
 
+  def to_csv
+    CSV.generate do |csv|
+      attrs = %w[name price description]
+      csv << attrs
+
+      cards.each do |card|
+        csv << attrs.map{ |attr| card.send(attr) }
+      end
+    end
+  end
+
   def add_card(card, quantity)
     return unless quantity && card
     cards << card unless cards.find_by(id: card.id)

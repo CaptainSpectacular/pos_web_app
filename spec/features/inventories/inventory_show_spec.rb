@@ -23,6 +23,10 @@ feature 'inventory show page' do
         expect(page).to have_content('Import from CSV')
         expect(page).to have_button('Import CSV')
       end
+
+      scenario 'they see option to export inventory' do
+        expect(page).to have_link('Export to CSV')
+      end
     end
   end
 end

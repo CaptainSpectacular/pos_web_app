@@ -7,6 +7,12 @@ class ImportExportController < ApplicationController
     redirect_to inventory_path(current_inventory)
   end
 
+  def show
+    respond_to do |format|
+      format.csv{ send_data current_inventory.to_csv, filename: "#{current_inventory.name}-#{Date.today}.csv" }
+    end
+  end
+
   private
 
   def set_importer

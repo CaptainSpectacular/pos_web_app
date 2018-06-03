@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   post '/inventories/:id/import', to: 'import_export#create', as: :inventory_import
 
+  get '/inventories/:id/export.csv', to: 'import_export#show', as: :inventory_export
+
 end

@@ -15,6 +15,10 @@
 
 </div>
 
+<div class="export">
+  <%= link_to 'Export to CSV', inventory_export_path(current_inventory) %>
+</div>
+
 <% if flash[:success] %>
   <div class='alert alert-success'>
     <%= flash[:success] %>
