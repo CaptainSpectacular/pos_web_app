@@ -1,0 +1,22 @@
+<div class="inventory-header">
+  <%= @presenter.name %>
+  <%= @presenter.total_items %>
+  <%= @presenter.user %>
+</div>
+<br>
+
+<strong>Import from CSV</strong>
+
+<div class="form import-form">
+  <%= form_for(:file, url: inventory_import_url(params[:id]), method: :post) do |f| %>
+    <%= f.file_field :csv %>
+    <%= f.submit 'Import CSV' %>
+  <% end %>
+
+</div>
+
+<% if flash[:success] %>
+  <div class='alert alert-success'>
+    <%= flash[:success] %>
+  </div>
+<% end %>

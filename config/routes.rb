@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :cards, param: :slug
 
   resources :inventories
+
+  post '/inventories/:id/import', to: 'import_export#create', as: :inventory_import
+
 end

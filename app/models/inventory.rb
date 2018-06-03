@@ -6,9 +6,14 @@ class Inventory < ApplicationRecord
   validates :name, presence: true
 
   def add_card(card, quantity)
+    return unless quantity && card
     cards << card unless cards.find_by(id: card.id)
     update_quantity(card, quantity)
     save
+  end
+
+  def total_items
+    cards.map{ |card| quantity(card) }.sum
   end
 
   def quantity(card)
