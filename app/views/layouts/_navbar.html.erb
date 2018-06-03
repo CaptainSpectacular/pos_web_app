@@ -22,6 +22,9 @@
             <li>
               <%= link_to 'My Profile', profile_path if current_user %>
             </li>
+            <li>
+              <%= link_to 'POS', pos_path if current_user %>
+            </li>
         </ul>
 
         <%= form_tag('/cards', method: 'get') do %>

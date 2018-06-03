@@ -30,9 +30,17 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         7,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
         null,
         null
       ],
@@ -166,6 +174,26 @@
         null,
         1,
         8,
+        null,
+        null
+      ],
+      "/Users/lighthouse/Documents/pos_app/pos_web_app/app/controllers/registrations_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null
+      ],
+      "/Users/lighthouse/Documents/pos_app/pos_web_app/app/controllers/session_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        15,
         null,
         null
       ],
@@ -310,6 +338,42 @@
         0,
         0
       ],
+      "/Users/lighthouse/Documents/pos_app/pos_web_app/app/controllers/charges_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/Users/lighthouse/Documents/pos_app/pos_web_app/app/controllers/import_export_controller.rb": [
         0,
         0,
@@ -346,6 +410,6 @@
         0
       ]
     },
-    "timestamp": 1527991542
+    "timestamp": 1528047750
   }
 }
