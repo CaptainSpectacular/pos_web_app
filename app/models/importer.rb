@@ -1,3 +1,5 @@
+require 'csv'
+
 class Importer
   attr_reader :unique, :total, :failed
 

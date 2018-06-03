@@ -10,6 +10,8 @@ gem 'will_paginate'
 gem 'faraday'
 gem 'figaro'
 
+gem 'csv'
+
 # Bootstrap
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
