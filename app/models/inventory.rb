@@ -7,11 +7,14 @@ class Inventory < ApplicationRecord
 
   def to_csv
     CSV.generate do |csv|
-      attrs = %w[name price description]
+      attrs = %w[name price description stock]
       csv << attrs
 
       cards.each do |card|
-        csv << attrs.map{ |attr| card.send(attr) }
+        csv << [card.name,
+                card.price,
+                card.description,
+                quantity(card)]
       end
     end
   end

@@ -24,3 +24,37 @@
     <%= flash[:success] %>
   </div>
 <% end %>
+
+<table class="card-table">
+  <tr>
+    <th>
+      Name
+    </th>
+    <th>
+      Price 
+    </th>
+    <th>
+      #In Stock 
+    </th>
+    <th>
+      Action
+    </th>
+  </tr>
+
+  <% current_inventory.cards.each do |card| %>
+    <tr>
+      <td>
+        <%= link_to card.name, card_path(card), class: 'card-list' %>
+      </td>
+      <td>
+        <%= card.price %>
+      </td>
+      <td>
+        <%= current_inventory.quantity(card) %>
+      </td>
+      <td>
+        <%= link_to 'Add to Transaction', transaction_path(params: {card: card}), method: :patch, class: 'card-list' %>
+      </td>
+    </tr>
+  <% end %>
+</table>

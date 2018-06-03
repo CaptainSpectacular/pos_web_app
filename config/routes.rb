@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   get '/inventories/:slug/export.csv', to: 'import_export#show', as: :inventory_export
 
+  patch '/transaction', to: 'transaction#update'
+
 end
