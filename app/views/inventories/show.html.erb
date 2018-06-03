@@ -8,7 +8,7 @@
 <strong>Import from CSV</strong>
 
 <div class="form import-form">
-  <%= form_for(:file, url: inventory_import_url(params[:id]), method: :post) do |f| %>
+  <%= form_for(:file, url: inventory_import_url(params[:slug]), method: :post) do |f| %>
     <%= f.file_field :csv %>
     <%= f.submit 'Import CSV' %>
   <% end %>

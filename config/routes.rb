@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   resources :charges
   resources :cards, param: :slug
 
-  resources :inventories
+  resources :inventories, param: :slug
 
-  post '/inventories/:id/import', to: 'import_export#create', as: :inventory_import
+  post '/inventories/:slug/import', to: 'import_export#create', as: :inventory_import
 
-  get '/inventories/:id/export.csv', to: 'import_export#show', as: :inventory_export
+  get '/inventories/:slug/export.csv', to: 'import_export#show', as: :inventory_export
 
 end

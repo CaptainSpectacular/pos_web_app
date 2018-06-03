@@ -28,7 +28,7 @@
               <% @inventories.each do |inventory| %>
                 <tr>
                   <td>
-                    <%= inventory.name %>
+                    <%= link_to inventory.name, inventory_path(inventory) %>
                   </td>
                   <td>
                     <%= inventory.cards.size %>

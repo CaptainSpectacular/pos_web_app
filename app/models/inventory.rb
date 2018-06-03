@@ -16,6 +16,10 @@ class Inventory < ApplicationRecord
     end
   end
 
+  def to_param
+    name
+  end
+
   def add_card(card, quantity)
     return unless quantity && card
     cards << card unless cards.find_by(id: card.id)

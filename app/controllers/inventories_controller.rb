@@ -11,7 +11,7 @@ class InventoriesController < ApplicationController
   end
 
   def show
-    @presenter = InventoryPresenter.new(Inventory.find(params[:id]))
+    @presenter = InventoryPresenter.new(current_user.inventories.find_by(name: params[:slug]))
   end
 
   def new

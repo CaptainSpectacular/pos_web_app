@@ -15,9 +15,9 @@ class Importer
     CSV.foreach(@file, headers: true, header_converters: :symbol) do |row|
       card = Card.find_by(name: row[:name])
       @failed += 1 && next unless card
+      @unique += 1 unless @inventory.cards.find_by(name: row[:name])
       @inventory.add_card(card, row[:quantity])
       @total  += row[:quantity].to_i
-      @unique += 1
     end
   end
 end
