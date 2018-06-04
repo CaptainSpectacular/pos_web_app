@@ -13,26 +13,16 @@ class Card < ApplicationRecord
   end
 
   def price
-    info = service.get_price(condition_id)
-    info[:results][0][:price]
+    info = service.get_info(name)
+    info[:price]
   end
 
   def image
     info = service.get_info(name)
-    info[:results].first[:image]
-  end
-
-  def condition_id
-    update(condition_id: set_con_id) unless self[:condition_id]
-    self[:condition_id]
+    info[:image]
   end
 
   private
-
-  def set_con_id
-    info =  service.get_info(name)
-    info[:results][0][:productConditions][0][:productConditionId]
-  end
 
   def service
     TCGPlayerService.new

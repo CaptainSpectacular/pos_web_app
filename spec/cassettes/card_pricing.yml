@@ -2,15 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.tcgplayer.com/v1.9.1/catalog/products?productName=Food%20Chain
+    uri: https://mtginventory-api.herokuapp.com/api/v1/info?name=Food%20Chain
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v0.15.1
-      Authorization:
-      - bearer 4qaSRMnuLQcX9BJ0QYduCUJVTJxew5OihOP-PcXNEi0YBpioiGpuQYxr4YjzMvvyMeaUSM5rBPiwQ7qCvcArHX4GxSm1mCZUwFXT5W7AUNEXNgisCjy_ZSj6rd3yn-xAhHGWIvoBpNfSW5nJ97_Fb8UiPvQ_cYAGlYwl50CiDtpq21hi5pbxDydXCtv5iUq5YXQA71yjQ6JuxVUxN9bQb4P4REZOW7YNGSrQyQi04RY21Ae8w7OhoVShp7oUbMOJY7mq4X4F7IkMC1aJ8UANSl4QqCLqAyYbTcdrgK3-MihaUTKvvmjqgB5u0MjCpgOjJxxdkg
+      Api-Id:
+      - 3940a2c8b5d3f2dbc1b17ac690dad1b10174c0a7
+      Api-Key:
+      - 493b70ef93f879be3082d48ac02d9a92118927df
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -20,118 +22,44 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Jun 2018 23:29:28 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Server:
-      - Microsoft-IIS/8.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      Date:
-      - Thu, 31 May 2018 21:47:12 GMT
-      Content-Length:
-      - '8470'
+      Etag:
+      - W/"673f936d332078e068c7c83e74029751"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 98428e46-9283-4e43-a479-51d342334112
+      X-Runtime:
+      - '0.393089'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"totalItems":1,"success":true,"errors":[],"results":[{"productId":6529,"productName":"Food
-        Chain","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/6529_200w.jpg","categoryId":1,"groupId":73,"url":"http://store.tcgplayer.com/magic/mercadian-masques/food-chain","modifiedOn":"2018-05-24T19:03:33.597","productConditions":[{"productConditionId":20025,"name":"Near
-        Mint","language":"English","isFoil":false},{"productConditionId":43829,"name":"Near
-        Mint Foil","language":"English","isFoil":true},{"productConditionId":322032,"name":"Damaged","language":"English","isFoil":false},{"productConditionId":337790,"name":"Moderately
-        Played","language":"English","isFoil":false},{"productConditionId":353548,"name":"Heavily
-        Played","language":"English","isFoil":false},{"productConditionId":369306,"name":"Lightly
-        Played","language":"English","isFoil":false},{"productConditionId":781315,"name":"Damaged
-        Foil","language":"English","isFoil":true},{"productConditionId":801276,"name":"Moderately
-        Played Foil","language":"English","isFoil":true},{"productConditionId":821237,"name":"Heavily
-        Played Foil","language":"English","isFoil":true},{"productConditionId":841198,"name":"Lightly
-        Played Foil","language":"English","isFoil":true},{"productConditionId":2425673,"name":"Near
-        Mint - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2426023,"name":"Lightly
-        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2426373,"name":"Moderately
-        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2426723,"name":"Heavily
-        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2427073,"name":"Damaged
-        - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2427423,"name":"Near
-        Mint Foil - Chinese (T)","language":"Chinese (T)","isFoil":true},{"productConditionId":2427773,"name":"Lightly
-        Played Foil - Chinese (T)","language":"Chinese (T)","isFoil":true},{"productConditionId":2428123,"name":"Moderately
-        Played Foil - Chinese (T)","language":"Chinese (T)","isFoil":true},{"productConditionId":2428473,"name":"Heavily
-        Played Foil - Chinese (T)","language":"Chinese (T)","isFoil":true},{"productConditionId":2428823,"name":"Damaged
-        Foil - Chinese (T)","language":"Chinese (T)","isFoil":true},{"productConditionId":2429173,"name":"Near
-        Mint - French","language":"French","isFoil":false},{"productConditionId":2429523,"name":"Lightly
-        Played - French","language":"French","isFoil":false},{"productConditionId":2429873,"name":"Moderately
-        Played - French","language":"French","isFoil":false},{"productConditionId":2430223,"name":"Heavily
-        Played - French","language":"French","isFoil":false},{"productConditionId":2430573,"name":"Damaged
-        - French","language":"French","isFoil":false},{"productConditionId":2430923,"name":"Near
-        Mint Foil - French","language":"French","isFoil":true},{"productConditionId":2431273,"name":"Lightly
-        Played Foil - French","language":"French","isFoil":true},{"productConditionId":2431623,"name":"Moderately
-        Played Foil - French","language":"French","isFoil":true},{"productConditionId":2431973,"name":"Heavily
-        Played Foil - French","language":"French","isFoil":true},{"productConditionId":2432323,"name":"Damaged
-        Foil - French","language":"French","isFoil":true},{"productConditionId":2432673,"name":"Near
-        Mint - German","language":"German","isFoil":false},{"productConditionId":2433023,"name":"Lightly
-        Played - German","language":"German","isFoil":false},{"productConditionId":2433373,"name":"Moderately
-        Played - German","language":"German","isFoil":false},{"productConditionId":2433723,"name":"Heavily
-        Played - German","language":"German","isFoil":false},{"productConditionId":2434073,"name":"Damaged
-        - German","language":"German","isFoil":false},{"productConditionId":2434423,"name":"Near
-        Mint Foil - German","language":"German","isFoil":true},{"productConditionId":2434773,"name":"Lightly
-        Played Foil - German","language":"German","isFoil":true},{"productConditionId":2435123,"name":"Moderately
-        Played Foil - German","language":"German","isFoil":true},{"productConditionId":2435473,"name":"Heavily
-        Played Foil - German","language":"German","isFoil":true},{"productConditionId":2435823,"name":"Damaged
-        Foil - German","language":"German","isFoil":true},{"productConditionId":2436173,"name":"Near
-        Mint - Italian","language":"Italian","isFoil":false},{"productConditionId":2436523,"name":"Lightly
-        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2436873,"name":"Moderately
-        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2437223,"name":"Heavily
-        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2437573,"name":"Damaged
-        - Italian","language":"Italian","isFoil":false},{"productConditionId":2437923,"name":"Near
-        Mint Foil - Italian","language":"Italian","isFoil":true},{"productConditionId":2438273,"name":"Lightly
-        Played Foil - Italian","language":"Italian","isFoil":true},{"productConditionId":2438623,"name":"Moderately
-        Played Foil - Italian","language":"Italian","isFoil":true},{"productConditionId":2438973,"name":"Heavily
-        Played Foil - Italian","language":"Italian","isFoil":true},{"productConditionId":2439323,"name":"Damaged
-        Foil - Italian","language":"Italian","isFoil":true},{"productConditionId":2439673,"name":"Near
-        Mint - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2440023,"name":"Lightly
-        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2440373,"name":"Moderately
-        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2440723,"name":"Heavily
-        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2441073,"name":"Damaged
-        - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2441423,"name":"Near
-        Mint Foil - Japanese","language":"Japanese","isFoil":true},{"productConditionId":2441773,"name":"Lightly
-        Played Foil - Japanese","language":"Japanese","isFoil":true},{"productConditionId":2442123,"name":"Moderately
-        Played Foil - Japanese","language":"Japanese","isFoil":true},{"productConditionId":2442473,"name":"Heavily
-        Played Foil - Japanese","language":"Japanese","isFoil":true},{"productConditionId":2442823,"name":"Damaged
-        Foil - Japanese","language":"Japanese","isFoil":true},{"productConditionId":2443173,"name":"Near
-        Mint - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2443523,"name":"Lightly
-        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2443873,"name":"Moderately
-        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2444223,"name":"Heavily
-        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2444573,"name":"Damaged
-        - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2444923,"name":"Near
-        Mint Foil - Portuguese","language":"Portuguese","isFoil":true},{"productConditionId":2445273,"name":"Lightly
-        Played Foil - Portuguese","language":"Portuguese","isFoil":true},{"productConditionId":2445623,"name":"Moderately
-        Played Foil - Portuguese","language":"Portuguese","isFoil":true},{"productConditionId":2445973,"name":"Heavily
-        Played Foil - Portuguese","language":"Portuguese","isFoil":true},{"productConditionId":2446323,"name":"Damaged
-        Foil - Portuguese","language":"Portuguese","isFoil":true},{"productConditionId":2446673,"name":"Near
-        Mint - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2447023,"name":"Lightly
-        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2447373,"name":"Moderately
-        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2447723,"name":"Heavily
-        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2448073,"name":"Damaged
-        - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2448423,"name":"Near
-        Mint Foil - Spanish","language":"Spanish","isFoil":true},{"productConditionId":2448773,"name":"Lightly
-        Played Foil - Spanish","language":"Spanish","isFoil":true},{"productConditionId":2449123,"name":"Moderately
-        Played Foil - Spanish","language":"Spanish","isFoil":true},{"productConditionId":2449473,"name":"Heavily
-        Played Foil - Spanish","language":"Spanish","isFoil":true},{"productConditionId":2449823,"name":"Damaged
-        Foil - Spanish","language":"Spanish","isFoil":true}]}]}'
+      string: '{"name":"Food Chain","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/6529_200w.jpg","price":46.83}'
     http_version: 
-  recorded_at: Thu, 31 May 2018 21:46:18 GMT
+  recorded_at: Mon, 04 Jun 2018 23:28:28 GMT
 - request:
     method: get
-    uri: http://api.tcgplayer.com/pricing/marketprices/18844
+    uri: https://mtginventory-api.herokuapp.com/api/v1/info?name=Food%20Chain
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v0.15.1
-      Authorization:
-      - bearer 4qaSRMnuLQcX9BJ0QYduCUJVTJxew5OihOP-PcXNEi0YBpioiGpuQYxr4YjzMvvyMeaUSM5rBPiwQ7qCvcArHX4GxSm1mCZUwFXT5W7AUNEXNgisCjy_ZSj6rd3yn-xAhHGWIvoBpNfSW5nJ97_Fb8UiPvQ_cYAGlYwl50CiDtpq21hi5pbxDydXCtv5iUq5YXQA71yjQ6JuxVUxN9bQb4P4REZOW7YNGSrQyQi04RY21Ae8w7OhoVShp7oUbMOJY7mq4X4F7IkMC1aJ8UANSl4QqCLqAyYbTcdrgK3-MihaUTKvvmjqgB5u0MjCpgOjJxxdkg
+      Api-Id:
+      - 3940a2c8b5d3f2dbc1b17ac690dad1b10174c0a7
+      Api-Key:
+      - 493b70ef93f879be3082d48ac02d9a92118927df
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -141,25 +69,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Jun 2018 23:29:29 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Server:
-      - Microsoft-IIS/8.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      Date:
-      - Thu, 31 May 2018 21:47:12 GMT
-      Content-Length:
-      - '124'
+      Etag:
+      - W/"673f936d332078e068c7c83e74029751"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b6eda1f4-6208-43a2-acf7-2957cabb920f
+      X-Runtime:
+      - '0.378256'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"success":true,"errors":[],"results":[{"productConditionId":18844,"price":26.48,"lowestRange":10.50,"highestRange":30.89}]}'
+      string: '{"name":"Food Chain","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/6529_200w.jpg","price":46.83}'
     http_version: 
-  recorded_at: Thu, 31 May 2018 21:46:18 GMT
+  recorded_at: Mon, 04 Jun 2018 23:28:29 GMT
 recorded_with: VCR 4.0.0

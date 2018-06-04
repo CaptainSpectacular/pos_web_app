@@ -5,7 +5,7 @@ describe MasterService do
 
   describe 'connection' do
     it 'has a connection' do
-      expect(service.send(:conn).url_prefix.to_s).to eq('http://api.tcgplayer.com/')
+      expect(service.send(:conn).url_prefix.to_s).to eq('https://mtginventory-api.herokuapp.com/api/v1')
     end
   end
 end
