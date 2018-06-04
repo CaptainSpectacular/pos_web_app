@@ -39,6 +39,15 @@ class Inventory < ApplicationRecord
     cards ? cards.quantity : 0
   end
 
+  def remove_card(card, quantity)
+    card = Card.find_by(name: card)
+    inventory_card = inventory_cards.find_by(card_id: card.id)
+    inventory_card.quantity -= quantity.to_i
+    inventory_card.save
+    cards.destroy(card) if quantity(card) == 0 
+    save
+  end
+
   private
 
   def update_quantity(card, quantity)

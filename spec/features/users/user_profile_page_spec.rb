@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 feature 'User profile page' do
-  let(:user) { create(:user) }
+  let(:inventory) { create(:inventory) }
+  let(:user) { inventory.user }
+
   background do
     visit new_user_session_path 
     fill_in 'Email', with: user.email

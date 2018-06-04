@@ -7,6 +7,7 @@ class ChargesController < ApplicationController
   end
 
   def create
+    update_inventory
     redirect_to pos_path
     rescue Stripe::CardError => e
       flash[:error] = e.message
@@ -14,6 +15,12 @@ class ChargesController < ApplicationController
   end
 
   private
+
+  def update_inventory
+    session[:current_transaction].map do |k, v|
+      current_inventory.remove_card(k, v)
+    end
+  end
 
   def validate_total
     return redirect_to new_charge_path if current_total <= 0

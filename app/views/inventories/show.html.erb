@@ -1,60 +1,66 @@
-<div class="inventory-header">
-  <%= @presenter.name %>
-  <%= @presenter.total_items %>
-  <%= @presenter.user %>
-</div>
-<br>
-
-<strong>Import from CSV</strong>
-
-<div class="form import-form">
-  <%= form_for(:file, url: inventory_import_url(params[:slug]), method: :post) do |f| %>
-    <%= f.file_field :csv %>
-    <%= f.submit 'Import CSV' %>
-  <% end %>
-
-</div>
-
-<div class="export">
-  <%= link_to 'Export to CSV', inventory_export_path(current_inventory) %>
-</div>
-
 <% if flash[:success] %>
   <div class='alert alert-success'>
     <%= flash[:success] %>
   </div>
 <% end %>
 
-<table class="card-table">
-  <tr>
-    <th>
-      Name
-    </th>
-    <th>
-      Price 
-    </th>
-    <th>
-      #In Stock 
-    </th>
-    <th>
-      Action
-    </th>
-  </tr>
+<div class="inventory-header">
+  <h3 class="inventory-info">
+    <%= @presenter.name %>
+  </h3>
+  <h4 class="inventory-info">
+    <%= @presenter.total_items %>
+  </h4>
+  <h4 class="inventory-info">
+    <%= @presenter.user %>
+  </h4>
+</div>
+<br>
 
-  <% current_inventory.cards.each do |card| %>
-    <tr>
-      <td>
-        <%= link_to card.name, card_path(card), class: 'card-list' %>
-      </td>
-      <td>
-        <%= card.price %>
-      </td>
-      <td>
-        <%= current_inventory.quantity(card) %>
-      </td>
-      <td>
-        <%= link_to 'Add to Transaction', transaction_path(params: {card: card}), method: :patch, class: 'card-list' %>
-      </td>
-    </tr>
+
+<div class="form import-form">
+  <strong>Import from CSV</strong>
+  <%= form_for(:file, url: inventory_import_url(params[:slug]), method: :post) do |f| %>
+    <%= f.file_field :csv, class: 'upload' %>
+    <%= f.submit 'Import CSV', class: 'upload-button' %>
   <% end %>
-</table>
+
+</div>
+
+
+<div class="alternate-index">
+  <%= link_to 'Export to CSV', inventory_export_path(current_inventory), class: 'export' %>
+  <table class="card-table">
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Price 
+      </th>
+      <th>
+        #In Stock 
+      </th>
+      <th>
+        Action
+      </th>
+    </tr>
+
+    <% current_inventory.cards.each do |card| %>
+      <tr>
+        <td>
+          <%= link_to card.name, card_path(card), class: 'card-list' %>
+        </td>
+        <td>
+          <%= number_to_currency(card.price) %>
+        </td>
+        <td>
+          <%= current_inventory.quantity(card) %>
+        </td>
+        <td>
+          <%= link_to 'Add to Transaction', transaction_path(params: {card: card}), method: :patch, class: 'card-list' %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

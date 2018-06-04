@@ -16,3 +16,22 @@
           data-amount="<%= (current_total * 100).to_i %>"
           data-locale="auto"></script>
 <% end %>
+
+<table>
+  <th>
+    Name
+  </th>
+  <th>
+    Quantity 
+  </th>
+  <% session[:current_transaction].each do |k, v| %>
+    <tr>
+      <td>
+        <%= k %>
+      </td>
+      <td>
+        <%= v %>
+      </td>
+    </tr>
+  <% end %>
+</table>
