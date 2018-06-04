@@ -10,13 +10,17 @@
     </label>
   </article>
 
+<div class="stripe-button">
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="<%= current_user.company  %>"
           data-amount="<%= (current_total * 100).to_i %>"
           data-locale="auto"></script>
+</div>
+
 <% end %>
 
+<br>
 <div class="alternate-index">
   <table class="card-table">
     <th>
