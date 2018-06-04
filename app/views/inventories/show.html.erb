@@ -58,7 +58,7 @@
           <%= current_inventory.quantity(card) %>
         </td>
         <td>
-          <%= link_to 'Add to Transaction', transaction_path(params: {card: card}), method: :patch, class: 'card-list' %>
+          <%= link_to 'Add to Transaction', transaction_path(params: {card: card, quantity: 1}), method: :patch, class: 'card-list' %>
         </td>
       </tr>
     <% end %>

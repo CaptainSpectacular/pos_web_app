@@ -17,21 +17,29 @@
           data-locale="auto"></script>
 <% end %>
 
-<table>
-  <th>
-    Name
-  </th>
-  <th>
-    Quantity 
-  </th>
-  <% session[:current_transaction].each do |k, v| %>
-    <tr>
-      <td>
-        <%= k %>
-      </td>
-      <td>
-        <%= v %>
-      </td>
-    </tr>
-  <% end %>
-</table>
+<div class="alternate-index">
+  <table class="card-table">
+    <th>
+      Name
+    </th>
+    <th>
+      Quantity 
+    </th>
+    <th>
+      Action 
+    </th>
+    <% session[:current_transaction].each do |k, v| %>
+      <tr>
+        <td>
+          <%= k %>
+        </td>
+        <td>
+          <%= v %>
+        </td>
+        <td>
+          <%= link_to 'Remove', transaction_path(params: { card: k, quantity: -1 }), method: :patch %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

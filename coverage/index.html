@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-06-03T19:04:10-06:00">2018-06-03T19:04:10-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-06-03T20:00:05-06:00">2018-06-03T20:00:05-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">56.52%</span></span>
+    (<span class="covered_percent"><span class="red">56.08%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.43
+         2.41
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>25</b> files in total.
-    <b>253</b> relevant lines. 
+    <b>255</b> relevant lines. 
     <span class="green"><b>143</b> lines covered</span> and
-    <span class="red"><b>110</b> lines missed </span>
+    <span class="red"><b>112</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -153,10 +153,10 @@
       <tr>
         <td class="strong"><a href="#21335ca46484bde174ff8b4db0c51c6dd17c2962" class="src_link" title="app/controllers/transaction_controller.rb">app/controllers/transaction_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
+        <td>12</td>
         <td>9</td>
-        <td>7</td>
         <td>0</td>
-        <td>7</td>
+        <td>9</td>
         <td>0.0</td>
       </tr>
       
@@ -309,20 +309,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">47.01%</span></span>
+    (<span class="covered_percent"><span class="red">46.22%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.96
+         0.94
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>10</b> files in total.
-    <b>117</b> relevant lines. 
+    <b>119</b> relevant lines. 
     <span class="green"><b>55</b> lines covered</span> and
-    <span class="red"><b>62</b> lines missed </span>
+    <span class="red"><b>64</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -421,10 +421,10 @@
       <tr>
         <td class="strong"><a href="#21335ca46484bde174ff8b4db0c51c6dd17c2962" class="src_link" title="app/controllers/transaction_controller.rb">app/controllers/transaction_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
+        <td>12</td>
         <td>9</td>
-        <td>7</td>
         <td>0</td>
-        <td>7</td>
+        <td>9</td>
         <td>0.0</td>
       </tr>
       
@@ -2070,9 +2070,9 @@
     <h3>app/controllers/transaction_controller.rb</h3>
     <h4><span class="red">0.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
+      <b>9</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <span class="red"><b>9</b> lines missed.</span>
     </div>
   </div>
   
@@ -2100,7 +2100,7 @@
         <li class="missed" data-hits="0" data-linenumber="4">
           
           
-          <code class="ruby">    session[:current_transaction].merge!({params[:card] =&gt; 1}) do |k, old, new| </code>
+          <code class="ruby">    session[:current_transaction].merge!({params[:card] =&gt; params[:quantity].to_i}) do |k, old, new| </code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="5">
@@ -2118,7 +2118,7 @@
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    session[:current_transaction].reject!{ |_, v| v &lt;= 0 }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -2128,6 +2128,24 @@
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    redirect_back(fallback_location: pos_path)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
           <code class="ruby">end</code>

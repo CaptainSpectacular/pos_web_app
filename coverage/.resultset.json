@@ -367,6 +367,9 @@
         0,
         0,
         null,
+        0,
+        0,
+        null,
         0
       ],
       "/Users/lighthouse/Documents/pos_app/pos_web_app/app/controllers/charges_controller.rb": [
@@ -448,6 +451,6 @@
         0
       ]
     },
-    "timestamp": 1528074250
+    "timestamp": 1528077605
   }
 }
