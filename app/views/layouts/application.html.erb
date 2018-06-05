@@ -11,5 +11,9 @@
     <%= render partial: 'layouts/navbar' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
+
+    <div class="load-time">
+      Page Rendered in <%= sprintf('%.3f', (Time.now.to_f - @start_time)) %> seconds
+    </div>
   </body>
 </html>
