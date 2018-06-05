@@ -2,15 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.tcgplayer.com/v1.9.1/catalog/products?productName=Dream%20Halls
+    uri: https://mtginventory-api.herokuapp.com/api/v1/info?name=Dream%20Halls
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v0.15.1
-      Authorization:
-      - bearer LwjgnPx4ex929FPSQEekr99H1LZxBK7oufLDnUKapmXMBvEChexAAk3YENyU53aGFQ3zDC2VljAH7G8_f_iY4xtN6IQRHfSqQCCUHCI88YnJUy1LkCWDvFZpgpfYUrD07LQF7Z8Pj6chRltX4SPr-MWhG7T8YGpt5zyFklRsdMz74xWWPPkOXx02nEHDUaYNRc4YjPom-_-wsV3wFZDOVoXHuRaWz44uZngmwIntBRN0ZWVUoEpRHI1P6xGWgI8RUG05sNmr3J97tc4Tm5j9R8miM4xtK365_dArswwUhYbV2rNB9oXhXe5880RR1-PzYOLppw
+      Api-Id:
+      - 3940a2c8b5d3f2dbc1b17ac690dad1b10174c0a7
+      Api-Key:
+      - 493b70ef93f879be3082d48ac02d9a92118927df
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -20,70 +22,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache
-      Pragma:
-      - no-cache
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Jun 2018 23:29:34 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Expires:
-      - "-1"
-      Server:
-      - Microsoft-IIS/8.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      Date:
-      - Tue, 29 May 2018 01:07:22 GMT
-      Content-Length:
-      - '4820'
+      Etag:
+      - W/"dc3371834f65577d258569d1db2cc784"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b2339e4e-d96d-4794-ba70-3f9ae9721625
+      X-Runtime:
+      - '0.374019'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"totalItems":1,"success":true,"errors":[],"results":[{"productId":5333,"productName":"Dream
-        Halls","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/5333_200w.jpg","categoryId":1,"groupId":107,"url":"http://store.tcgplayer.com/magic/stronghold/dream-halls","modifiedOn":"2017-09-14T13:35:32.927","productConditions":[{"productConditionId":18844,"name":"Near
-        Mint","language":"English","isFoil":false},{"productConditionId":320851,"name":"Damaged","language":"English","isFoil":false},{"productConditionId":336609,"name":"Moderately
-        Played","language":"English","isFoil":false},{"productConditionId":352367,"name":"Heavily
-        Played","language":"English","isFoil":false},{"productConditionId":368125,"name":"Lightly
-        Played","language":"English","isFoil":false},{"productConditionId":2544550,"name":"Near
-        Mint - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2544693,"name":"Lightly
-        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2544836,"name":"Moderately
-        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2544979,"name":"Heavily
-        Played - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2545122,"name":"Damaged
-        - Chinese (T)","language":"Chinese (T)","isFoil":false},{"productConditionId":2545980,"name":"Near
-        Mint - French","language":"French","isFoil":false},{"productConditionId":2546123,"name":"Lightly
-        Played - French","language":"French","isFoil":false},{"productConditionId":2546266,"name":"Moderately
-        Played - French","language":"French","isFoil":false},{"productConditionId":2546409,"name":"Heavily
-        Played - French","language":"French","isFoil":false},{"productConditionId":2546552,"name":"Damaged
-        - French","language":"French","isFoil":false},{"productConditionId":2547410,"name":"Near
-        Mint - German","language":"German","isFoil":false},{"productConditionId":2547553,"name":"Lightly
-        Played - German","language":"German","isFoil":false},{"productConditionId":2547696,"name":"Moderately
-        Played - German","language":"German","isFoil":false},{"productConditionId":2547839,"name":"Heavily
-        Played - German","language":"German","isFoil":false},{"productConditionId":2547982,"name":"Damaged
-        - German","language":"German","isFoil":false},{"productConditionId":2548840,"name":"Near
-        Mint - Italian","language":"Italian","isFoil":false},{"productConditionId":2548983,"name":"Lightly
-        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2549126,"name":"Moderately
-        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2549269,"name":"Heavily
-        Played - Italian","language":"Italian","isFoil":false},{"productConditionId":2549412,"name":"Damaged
-        - Italian","language":"Italian","isFoil":false},{"productConditionId":2550270,"name":"Near
-        Mint - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550413,"name":"Lightly
-        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550556,"name":"Moderately
-        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550699,"name":"Heavily
-        Played - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2550842,"name":"Damaged
-        - Japanese","language":"Japanese","isFoil":false},{"productConditionId":2551700,"name":"Near
-        Mint - Korean","language":"Korean","isFoil":false},{"productConditionId":2551843,"name":"Lightly
-        Played - Korean","language":"Korean","isFoil":false},{"productConditionId":2551986,"name":"Moderately
-        Played - Korean","language":"Korean","isFoil":false},{"productConditionId":2552129,"name":"Heavily
-        Played - Korean","language":"Korean","isFoil":false},{"productConditionId":2552272,"name":"Damaged
-        - Korean","language":"Korean","isFoil":false},{"productConditionId":2553130,"name":"Near
-        Mint - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553273,"name":"Lightly
-        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553416,"name":"Moderately
-        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553559,"name":"Heavily
-        Played - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2553702,"name":"Damaged
-        - Portuguese","language":"Portuguese","isFoil":false},{"productConditionId":2554560,"name":"Near
-        Mint - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2554703,"name":"Lightly
-        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2554846,"name":"Moderately
-        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2554989,"name":"Heavily
-        Played - Spanish","language":"Spanish","isFoil":false},{"productConditionId":2555132,"name":"Damaged
-        - Spanish","language":"Spanish","isFoil":false}]}]}'
+      string: '{"name":"Dream Halls","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/5333_200w.jpg","price":26.6}'
     http_version: 
-  recorded_at: Tue, 29 May 2018 01:06:29 GMT
+  recorded_at: Mon, 04 Jun 2018 23:28:34 GMT
 recorded_with: VCR 4.0.0

@@ -1,0 +1,49 @@
+<%= form_tag pos_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span>Amount: <%= number_to_currency(current_total) %></span>
+    </label>
+  </article>
+
+<div class="stripe-button">
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="<%= current_user.company  %>"
+          data-amount="<%= (current_total * 100).to_i %>"
+          data-locale="auto"></script>
+</div>
+
+<% end %>
+
+<br>
+<div class="alternate-index">
+  <table class="card-table">
+    <th>
+      Name
+    </th>
+    <th>
+      Quantity 
+    </th>
+    <th>
+      Action 
+    </th>
+    <% session[:current_transaction].each do |k, v| %>
+      <tr>
+        <td>
+          <%= k %>
+        </td>
+        <td>
+          <%= v %>
+        </td>
+        <td>
+          <%= link_to 'Remove', transaction_path(params: { card: k, quantity: -1 }), method: :patch %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

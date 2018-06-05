@@ -1,5 +1,6 @@
 class InventoriesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_card, only: :update
 
   def index
     @inventories = Inventory.where(user: current_user)
@@ -10,10 +11,16 @@ class InventoriesController < ApplicationController
   end
 
   def show
-    @presenter = InventoryPresenter.new(Inventory.find(id))
+    @presenter = InventoryPresenter.new(current_user.inventories.find_by(name: params[:slug]))
   end
 
   def new
+  end
+
+  def update
+    current_inventory.add_card(@card, params[:quantity][:integer]) 
+    
+    redirect_back(fallback_location: { controller: 'cards', action: 'index' })
   end
 
   def create
@@ -28,5 +35,9 @@ class InventoriesController < ApplicationController
 
   def inventory_params
     params.require(:inventory).permit(:name)
+  end
+
+  def set_card
+    @card = Card.find_by(name: params[:card])
   end
 end

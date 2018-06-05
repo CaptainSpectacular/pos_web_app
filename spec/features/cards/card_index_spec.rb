@@ -10,6 +10,17 @@ feature 'card index page' do
     scenario 'they see 25 cards per page' do
       expect(page).to have_css('.card-list', count: 25)
       expect(page).to have_link(Card.first.name)
+      expect(page).to have_content('Previous')
+      expect(page).to have_content('Next')
+      expect(page).to have_content('Displaying Card 1 - 25 of 26 in total')
+    end
+
+    scenario 'they see two pages' do
+      expect(page).to have_link(2)
+    
+      click_on 'Next'
+
+      expect(page).to have_css('.card-list', count: 1)
     end
   end
 

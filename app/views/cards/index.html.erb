@@ -1,7 +1,38 @@
-<%= link_to 'Sort by Set', '?sort=set' %>
-<%= link_to 'Sort by Color', '?sort=color' %>
-<%= link_to 'Sort by Name', '?sort=name' %>
+<div class="sorting">
+  <%= link_to 'Sort by Set', '?sort=set', class: 'sort-link' %>
+  <%= link_to 'Sort by Color', '?sort=color', class: 'sort-link' %>
+  <%= link_to 'Sort by Name', '?sort=name', class: 'sort-link' %>
+</div>
 
-<% @cards.each do |card| %>
-  <%= link_to card.name, card_path(card), class: 'card-list' %>
-<% end %>
+<div class="card-index">
+  <table class="card-table">
+    <tr>
+      <th>
+        Name
+      </th>
+
+      <th>
+        Colors
+      </th>
+    </tr>
+
+    <% @cards.each do |card| %>
+
+      <tr>
+        <td>
+          <%= link_to card.name, card_path(card), class: 'card-list' %>
+        </td>
+
+        <td class="colors">
+          colors
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <div class="apple_pagination card-nav">
+    <div class="page_info">
+      <%= page_entries_info @cards %>
+    </div>
+    <%= will_paginate @cards, :container => false %>
+  </div>
+</div>

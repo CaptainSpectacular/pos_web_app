@@ -4,7 +4,7 @@ FactoryBot.define do
     user { create(:user) }
   end
 
-  sequence :iventory_name do |num|
+  sequence :inventory_name do |num|
     "Typing Like a Barbarian #{num}"
   end
 end

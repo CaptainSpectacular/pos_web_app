@@ -1,0 +1,65 @@
+<% if flash[:success] %>
+  <div class='alert alert-success'>
+    <%= flash[:success] %>
+  </div>
+<% end %>
+
+<div class="inventory-header">
+  <h3 class="inventory-info">
+    <%= @presenter.name %>
+  </h3>
+  <h4 class="inventory-info">
+    <%= @presenter.total_items %>
+  </h4>
+  <h4 class="inventory-info">
+    <%= @presenter.user %>
+  </h4>
+</div>
+<br>
+
+
+<div class="form import-form">
+  <strong>Import from CSV</strong>
+  <%= form_for(:file, url: inventory_import_url(params[:slug]), method: :post) do |f| %>
+    <%= f.file_field :csv, class: 'upload' %>
+    <%= f.submit 'Import CSV', class: 'upload-button' %>
+  <% end %>
+
+</div>
+
+
+<div class="alternate-index">
+  <%= link_to 'Export to CSV', inventory_export_path(current_inventory), class: 'export' %>
+  <table class="card-table">
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Price 
+      </th>
+      <th>
+        #In Stock 
+      </th>
+      <th>
+        Action
+      </th>
+    </tr>
+
+    <% current_inventory.cards.each do |card| %>
+      <tr>
+        <td>
+          <%= link_to card.name, card_path(card), class: 'card-list' %>
+        </td>
+        <td id="price">
+        </td>
+        <td>
+          <%= current_inventory.quantity(card) %>
+        </td>
+        <td>
+          <%= link_to 'Add to Transaction', transaction_path(params: {card: card, quantity: 1}), method: :patch, class: 'card-list' %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

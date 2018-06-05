@@ -4,28 +4,25 @@ class Card < ApplicationRecord
 
   validates :name, presence: true
 
+  def self.like(params)
+    where("name LIKE '%#{params}%'")
+  end
+
   def to_param
     name
   end
 
   def price
-    info = service.get_price(con_id)
-    info[:results][0][:price]
+    info = service.get_info(name)
+    info[:price]
   end
 
   def image
     info = service.get_info(name)
-    info[:results].first[:image]
+    info[:image]
   end
 
   private
-
-  def con_id
-    info           = service.get_info(name)
-    condition_id ||= info[:results].first[:productConditions].first[:productConditionId]
-    save
-    condition_id
-  end
 
   def service
     TCGPlayerService.new

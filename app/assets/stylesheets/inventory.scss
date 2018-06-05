@@ -1,0 +1,31 @@
+.export{
+  color: white;
+  &:hover{
+    color: white;
+  }
+}
+
+.import-form{
+  text-align: center;
+  margin: auto;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.upload{
+  margin: auto;
+  display: inline-block;
+}
+
+.upload-button{
+  display: inline-block;
+}
+
+.inventory-header{
+  width: 70%;
+  margin: auto;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  text-align: center;
+}

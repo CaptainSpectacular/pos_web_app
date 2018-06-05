@@ -15,8 +15,11 @@ class CardsController < ApplicationController
     @card = Card.find_by(name: params[:slug])
   end
 
+  def paginate
+    Card.paginate(page: params[:page], per_page: 25)
+  end
+
   def search
-    @cards = Card.paginate(page: params[:page], per_page: 25)
-                 .where("name LIKE '%#{params[:q]}%'")
+    @cards = params[:q] ? paginate.like(params[:q]) : paginate.order(:name)
   end
 end

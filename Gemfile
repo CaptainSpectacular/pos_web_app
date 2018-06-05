@@ -5,15 +5,20 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'stripe'
+
 gem 'will_paginate'
 
 gem 'faraday'
 gem 'figaro'
 
+gem 'csv'
+
 # Bootstrap
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Security. Devise
 gem 'devise'

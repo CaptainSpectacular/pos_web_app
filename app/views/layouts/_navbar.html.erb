@@ -22,12 +22,15 @@
             <li>
               <%= link_to 'My Profile', profile_path if current_user %>
             </li>
+            <li>
+              <%= link_to 'POS', pos_path if current_user %>
+            </li>
         </ul>
 
         <%= form_tag('/cards', method: 'get') do %>
           <div class="navbar-form navbar-left">
             <div class="input-group">
-              <%= text_field_tag :q, nil, class: 'form-control' %>
+              <%= text_field_tag :q, nil, class: 'form-control search' %>
               <div class="input-group-btn">
                 <%= submit_tag 'Search', method: :get, class: 'btn btn-default' %>
               </div>

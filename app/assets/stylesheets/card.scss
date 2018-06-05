@@ -1,7 +1,32 @@
+.card-index{
+  margin: auto;
+  width: 33%;
+}
+
+.alternate-index{
+  margin: auto;
+  width: 60%;
+}
+
+.card-table{
+  margin: auto;
+  border: 1px solid white;
+  border-collapse: collapse;
+  background-color: #7F7F7F;
+  width: 100%;
+  tr{
+    border: 1px solid white; 
+
+    td, th{ 
+      text-align: center;
+      border: 1px solid white;
+    }
+  }
+}
+
 .card-list{
-  text-align: center;
   display: block;
-  color: #7F7F7F;
+  color: black;
   &:hover{
     color: white;
   }
@@ -36,4 +61,21 @@
 
 .card-options{
   color: black;
+}
+
+.sorting{
+  text-align: center;
+}
+
+.card-nav{
+  color: white;
+}
+
+.sort-link{
+  color: white;
+  margin: auto;
+
+  &:hover{
+    color: white;
+  }
 }
