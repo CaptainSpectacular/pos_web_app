@@ -51,8 +51,7 @@
         <td>
           <%= link_to card.name, card_path(card), class: 'card-list' %>
         </td>
-        <td>
-          <%= number_to_currency(card.price) %>
+        <td id="price">
         </td>
         <td>
           <%= current_inventory.quantity(card) %>

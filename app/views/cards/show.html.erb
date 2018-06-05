@@ -1,24 +1,10 @@
-
 <div class="card-container">
-  <div>
-    <%= image_tag(@presenter.image, class: 'card') %>
-  </div>
-
   <div class="card-info">
     <div class="card-title">
       <h4>
         Name: <%= @presenter.name %>
       <h4>
     </div>
-
-    <div class="card-pricing">
-      <h5>
-        <div>
-          Near Mint: <%= number_to_currency(@presenter.price) %>
-        <div>
-      </h5>
-    </div>
-
     <%= render partial: 'add_to_inventory_form' if current_user %>
   </div>
 </div>
