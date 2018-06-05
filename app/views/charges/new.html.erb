@@ -34,10 +34,10 @@
     </th>
     <% session[:current_transaction].each do |k, v| %>
       <tr>
-        <td>
+        <td class="trans-card">
           <%= k %>
         </td>
-        <td>
+        <td class="trans-card" id="quantity">
           <%= v %>
         </td>
         <td>
