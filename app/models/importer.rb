@@ -19,7 +19,7 @@ class Importer
         next
       end
       @unique += 1 unless @inventory.cards.find_by(name: row[:name])
-      @inventory.add_card(card, row[:quantity])
+      @inventory.add_card(card, row[:quantity].to_i)
       @total  += row[:quantity].to_i
     end
   end
