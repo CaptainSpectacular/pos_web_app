@@ -25,26 +25,26 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 04 Jun 2018 23:29:34 GMT
+      - Wed, 06 Jun 2018 14:31:55 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"dc3371834f65577d258569d1db2cc784"
+      - W/"8837dd0d39b2c3e13cda6ca6daa7636e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b2339e4e-d96d-4794-ba70-3f9ae9721625
+      - c5f81840-b8d8-4cd1-802b-f0941bfefcab
       X-Runtime:
-      - '0.374019'
+      - '0.678453'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"Dream Halls","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/5333_200w.jpg","price":26.6}'
+      string: '{"name":"Dream Halls","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/5333_200w.jpg","price":26.72}'
     http_version: 
-  recorded_at: Mon, 04 Jun 2018 23:28:34 GMT
+  recorded_at: Wed, 06 Jun 2018 14:30:53 GMT
 recorded_with: VCR 4.0.0
