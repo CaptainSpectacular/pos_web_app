@@ -6,10 +6,6 @@ class InventoriesController < ApplicationController
     @inventories = Inventory.where(user: current_user)
   end
 
-  def browse
-    @inventories = Inventory.all
-  end
-
   def show
     @presenter = InventoryPresenter.new(current_user.inventories.find_by(name: params[:slug]))
   end

@@ -47,6 +47,19 @@ describe Importer do
         expect(inventory.quantity(c1)).to eq(3)
         expect(inventory.quantity(c3)).to eq(11)
       end
+
+      it 'adds existing cards' do
+        c1 = Card.create(name: "Jace's Sanctum")
+        c2 = Card.create(name: "Oath of Jace")
+        c3 = Card.create(name: "Food Chain")
+
+        importer.load
+        importer.load
+      
+        expect(importer.unique).to eq(0)
+        expect(importer.failed).to eq(6)
+        expect(importer.total).to eq(16)
+      end
     end
   end
 end
