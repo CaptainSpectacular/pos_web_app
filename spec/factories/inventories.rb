@@ -5,6 +5,6 @@ FactoryBot.define do
   end
 
   sequence :inventory_name do |num|
-    "Typing Like a Barbarian #{num}"
+    "Typing_Like_a_Barbarian #{num}"
   end
 end

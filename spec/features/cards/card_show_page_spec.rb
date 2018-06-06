@@ -11,7 +11,7 @@ feature 'card show page' do
       end
     end
 
-    it 'shows the card image' do
+    xit 'shows the card image' do
       expect(page).to have_css('.card')
     end
 
@@ -19,7 +19,7 @@ feature 'card show page' do
       expect(page).to have_content(card.name)
     end
 
-    it 'shows the card price' do
+    xit 'shows the card price' do
       expect(page.html).to match(/\$\d*\.\d\d/)
     end
 

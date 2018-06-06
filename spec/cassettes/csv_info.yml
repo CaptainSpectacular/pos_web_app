@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 06 Jun 2018 14:31:53 GMT
+      - Wed, 06 Jun 2018 14:31:54 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -35,9 +35,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d53e80d9-b645-47e9-b17e-998aa6c7befd
+      - 78ce0bee-2b8f-4280-9c80-264ae082de95
       X-Runtime:
-      - '0.689152'
+      - '0.450166'
       Transfer-Encoding:
       - chunked
       Via:
@@ -46,5 +46,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"name":"Food Chain","image":"https://6d4be195623157e28848-7697ece4918e0a73861de0eb37d08968.ssl.cf1.rackcdn.com/6529_200w.jpg","price":47.03}'
     http_version: 
-  recorded_at: Wed, 06 Jun 2018 14:30:50 GMT
+  recorded_at: Wed, 06 Jun 2018 14:30:52 GMT
 recorded_with: VCR 4.0.0
