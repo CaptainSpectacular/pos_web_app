@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   before_action :validate_total, only: [:create]
-  before_action :set_charge_master
+  before_action :set_customer_and_charge, only: [:create]
   after_action :reset_total, only: [:create]
 
   def new
@@ -8,9 +8,6 @@ class ChargesController < ApplicationController
 
   def create
     update_inventory
-    @charge_master.customer
-    @charge_master.charge
-
     redirect_to pos_path
     rescue Stripe::CardError => e
       flash[:error] = e.message
@@ -33,12 +30,12 @@ class ChargesController < ApplicationController
     session[:current_transaction] = Hash.new 
   end
 
-  def set_charge_master
-    @charge_master ||= ChargeMaster.new(charge_params, current_total)
+  def set_customer_and_charge
+    customer = Stripe::Customer.create(email: params[:stripeemail],
+                                       source: params[:stripeToken])
+    charge = Stripe::Charge.create( customer: customer.id,
+                                    amount: (current_total * 100).to_i,
+                                    description: 'Mock Stripe Customer',
+                                    currency: 'usd')
   end
-
-  def charge_params
-    params.permit(:authenticity_token, :stripeToken, :stripeTokenType, :stripeEmail) 
-  end
-
 end
