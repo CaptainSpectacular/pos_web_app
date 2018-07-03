@@ -1,50 +1,50 @@
-*MTGInventory
+# MTGInventory
 >A basic inventory that is meant to transition into a functioning POS system targeted at small card shops. Key features include importing/exporting an inventory, displaying live pricing information from TCGPlayer, and processing transactions using Stripe.
 
-*Deployed Application
+# Deployed Application
 >You can find a production version of the app @ https://mtginventory.herokuapp.com/
 
-*Getting Started
+# Getting Started
 >These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-*Prerequisites
-## Ruby 2.4 + 
-## Rails 5+
-## PostgreSQL
-## Installing
-## Clone down this repository
+# Prerequisites
+### Ruby 2.4 + 
+### Rails 5+
+### PostgreSQL
+### Installing
 
->git clone https://github.com/pollockcl/pos_web_app
+#### Clone down this repository
+
+`git clone https://github.com/pollockcl/pos_web_app`
 >Change into the project directory
+`cd pos_web_app`
+#### Install dependencies
 
->cd pos_web_app
-*Install dependencies
+`bundle install`
+>contact me to get an api key to communicate with the back end :)
+>OR
+>Sign up for a Stripe key @ www.stripe.com/ and build the back end separate
 
->bundle install
->contact me to get an api key
->Sign up for a Stripe key @ www.stripe.com/
-
->figaro install
+`figaro install`
 >Open application.yml
 
->open config/application.yml
+`vim config/application.yml`
 >API_ID: COPY YOUR API ID HERE
 >API_KEY: COPY YOUR API KEY HERE
 >PUBLISHABLE_KEY: COPY YOUR STRIPE PUBLISHABLE KEY HERE
 >SECRET_KEY: COPY YOUR STRIPE SECRET KEY HERE
-> and save
+>and save
 
->Run rails db:{create,migrate,seed}
+>Run `rails db:{create,migrate,seed}`
 
->Run rails server
+>Run `rails server`
 
->rails s
 >Visit localhost:3000 in your browser
 
-*Running the tests
+### Running the tests
 >To run all tests rspec
 
-*Tests include:
+#### Tests include:
 
 >feature specs
 >model specs
@@ -55,7 +55,7 @@
 >shoulda-matchers
 >database_cleaner
 
-*Built With
+### Built With
 >jQuery - Fetch calls for asynchronous loading.
 >Devise - Authentication
 >Stripe - Credit card processing
@@ -65,5 +65,5 @@
 >The application sends a GET request to an internal api, which forwards it to TCGPlayer to grab pricing and detail information.
 
 
-*Contributing
->This application is a work in progress, and I encourage pull requests on how it can be improved.
+### Contributing
+>This application is a work in progress, and I encourage pull requests and feedback on how it can be improved.
