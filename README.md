@@ -1,10 +1,8 @@
 # MTGInventory
 
-
 A basic inventory that is meant to transition into a functioning POS system targeted at small card shops. Key features include importing/exporting an inventory, displaying live pricing information from TCGPlayer, and processing transactions using Stripe.
 
 # Deployed Application
-
 
 You can find a production version of the app @ https://mtginventory.herokuapp.com/
 
@@ -31,100 +29,90 @@ Change into the project directory
 `bundle install`
 
 
-contact me to get an api key to communicate with the back end :)
+  *contact me to get an api key to communicate with the back end :)
 
 
-OR
+      *OR
 
 
-Sign up for a Stripe key @ www.stripe.com/ and build the back end separate
+  *Sign up for a Stripe key @ www.stripe.com/ and build the back end separate
 
-`figaro install`
-
-
-Open application.yml
-
-`vim config/application.yml`
+    `figaro install`
 
 
+  *Open application.yml
+
+    `vim config/application.yml`
+
+```
 API_ID: COPY YOUR API ID HERE
-
-
 API_KEY: COPY YOUR API KEY HERE
-
-
 PUBLISHABLE_KEY: COPY YOUR STRIPE PUBLISHABLE KEY HERE
-
-
 SECRET_KEY: COPY YOUR STRIPE SECRET KEY HERE
+```
+
+  *save
 
 
-and save
+  *Run `rails db:{create,migrate,seed}`
 
 
-
-Run `rails db:{create,migrate,seed}`
-
+  *Run `rails server`
 
 
-Run `rails server`
-
-
-
-Visit localhost:3000 in your browser
+  *Visit localhost:3000 in your browser
 
 ### Running the tests
 
-
-To run all tests rspec
+Run `rspec` from the cmd or terminal.
 
 #### Tests include:
 
 
-
-feature specs
-
-
-model specs
+  *feature specs
 
 
-Tested With
+  *model specs
 
 
-Capybara
+  *Tested With
 
 
-factory_bot_rails
+  *Capybara
 
 
-vcr
+  *factory_bot_rails
 
 
-shoulda-matchers
+  *vcr
 
 
-database_cleaner
+  *shoulda-matchers
+
+
+  *database_cleaner
+
 
 ### Built With
 
 
-jQuery - Fetch calls for asynchronous loading.
+**jQuery** - Fetch calls for asynchronous loading.
 
 
-Devise - Authentication
+**Devise** - Authentication
 
 
-Stripe - Credit card processing
+**Stripe** - Credit card processing
 
 
-TCGPlayer - The web api used to perform price lookups on cards
+**TCGPlayer** - The web api used to perform price lookups on cards
 
 
-pos_api - An internal API I built to communicate with TCGPlayer
+**pos_api** - An internal API written in Rails to communicate with TCGPlayer
 
 
 
-The application sends a GET request to an internal api, which forwards it to TCGPlayer to grab pricing and detail information.
+The application sends GET requests to an internal api, which forwards it to TCGPlayer to grab pricing and detail information.
 
 
 ### Contributing
