@@ -29,18 +29,18 @@ Change into the project directory
 `bundle install`
 
 
-  *contact me to get an api key to communicate with the back end :)
+ contact me to get an api key to communicate with the back end :)
 
 
-      *OR
+     OR
 
 
-  *Sign up for a Stripe key @ www.stripe.com/ and build the back end separate
+ Sign up for a Stripe key @ www.stripe.com/ and build the back end separate
 
     `figaro install`
 
 
-  *Open application.yml
+ Open application.yml
 
     `vim config/application.yml`
 
@@ -51,16 +51,16 @@ PUBLISHABLE_KEY: COPY YOUR STRIPE PUBLISHABLE KEY HERE
 SECRET_KEY: COPY YOUR STRIPE SECRET KEY HERE
 ```
 
-  *save
+ save
 
 
-  *Run `rails db:{create,migrate,seed}`
+ Run `rails db:{create,migrate,seed}`
 
 
-  *Run `rails server`
+ Run `rails server`
 
 
-  *Visit localhost:3000 in your browser
+ Visit localhost:3000 in your browser
 
 ### Running the tests
 
@@ -69,28 +69,28 @@ Run `rspec` from the cmd or terminal.
 #### Tests include:
 
 
-  *feature specs
+ feature specs
 
 
-  *model specs
+ model specs
 
 
-  *Tested With
+ Tested With
 
 
-  *Capybara
+ Capybara
 
 
-  *factory_bot_rails
+ factory_bot_rails
 
 
-  *vcr
+ vcr
 
 
-  *shoulda-matchers
+ shoulda-matchers
 
 
-  *database_cleaner
+ database_cleaner
 
 
 ### Built With
