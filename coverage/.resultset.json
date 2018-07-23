@@ -317,6 +317,11 @@
       "/Users/lighthouse/Documents/pos_app/pos_web_app/app/controllers/registrations_controller.rb": [
         1,
         1,
+        1,
+        null,
+        1,
+        4,
+        null,
         null,
         1,
         4,
@@ -421,6 +426,12 @@
         null,
         null
       ],
+      "/Users/lighthouse/Documents/pos_app/pos_web_app/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
       "/Users/lighthouse/Documents/pos_app/pos_web_app/app/jobs/application_job.rb": [
         0,
         0
@@ -430,8 +441,14 @@
         0,
         0,
         0
+      ],
+      "/Users/lighthouse/Documents/pos_app/pos_web_app/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1528310650
+    "timestamp": 1532384588
   }
 }
