@@ -4,6 +4,7 @@ A basic inventory that is meant to transition into a functioning POS system targ
 
 # Deployed Application
 
+ ### Under construction! I've exceeded their database limits!
 You can find a production version of the app @ https://mtginventory.herokuapp.com/
 
 # Getting Started
