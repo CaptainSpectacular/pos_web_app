@@ -4,13 +4,13 @@ A basic inventory that is meant to transition into a functioning POS system targ
 
 # Deployed Application
 
- ### Under construction! I've exceeded their database limits!
+ ### Due to constraints on Heroku's database requirements, only one set has been imported into the database.
 You can find a production version of the app @ https://mtginventory.herokuapp.com/
 
 # Getting Started
 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. You can get key's to use either from TCGPlayer.com or contact me to use my API, which can be found [here](https://github.com/pollockcl/pos_api)!
 
 # Prerequisites
 ### Ruby 2.4 + 
@@ -45,12 +45,20 @@ Change into the project directory
 
     `vim config/application.yml`
 
+ Using my API:
 ```
 API_ID: COPY YOUR API ID HERE
 API_KEY: COPY YOUR API KEY HERE
 PUBLISHABLE_KEY: COPY YOUR STRIPE PUBLISHABLE KEY HERE
 SECRET_KEY: COPY YOUR STRIPE SECRET KEY HERE
 ```
+
+ Using TCGPlayer:
+ ```
+ BEARER_TOKEN: YOUR BEARER TOKEIN
+ CLIENT_ID: YOUR CLIENT ID
+ CLIENT_SECRET: YOUR CLIENT SECRET
+ ```
 
  save
 
