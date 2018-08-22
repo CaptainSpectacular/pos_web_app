@@ -13,7 +13,7 @@ position = 1
 parsed["cards"].each do |k|
   Card.create(name: k["name"],
               description: k["text"])
-  puts "Creating #{position}: #{k["name"}" 
+  puts "Creating #{position}: #{k["name"]}" 
   position += 1
 end
 puts "Done!"
